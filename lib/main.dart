@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'package:kenburns/kenburns.dart';
 import 'package:supercharged/supercharged.dart';
 
 import 'package:fl_shop/widgets/album_card.dart';
@@ -14,7 +15,7 @@ void main() {
     ),
   );
   runApp(MyApp());
-} 
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -56,10 +57,11 @@ class NewsApp extends StatelessWidget {
                               fontSize: 16.0,
                               fontWeight: FontWeight.w700,
                             ))),
-                        background: Image.asset(
-                          'assets/undraw_add_to_cart_vkjp.png',
-                          fit: BoxFit.cover,
-                        )),
+                        background: KenBurns(
+                            child: Image.asset(
+                              'assets/undraw_add_to_cart_vkjp.png',
+                              fit: BoxFit.cover,
+                            ))),
                   )),
               SliverPersistentHeader(
                 delegate: _SliverAppBarDelegate(
